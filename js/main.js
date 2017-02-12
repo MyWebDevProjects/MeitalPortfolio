@@ -49,7 +49,12 @@ main();
 
 $(document).ready(function(){
     
-    
+    $('.img-responsive').click(function(){
+        lightbox.option({
+            
+        });
+        
+    });
     
     
 }); //end ready
