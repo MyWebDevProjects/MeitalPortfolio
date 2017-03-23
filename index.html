@@ -23,12 +23,12 @@
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700,100,800,900,400,200,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
-    <link href="lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
-    <script src="lightbox2-master/dist/js/lightbox.js"></script>
+    
 </head>
 
 <body>
     <div id="tf-home">
+        <a href="img/1.jpg"></a>
         <div class="overlay">
             <div id="sticky-anchor"></div>
             <nav id="tf-menu" class="navbar navbar-default">
@@ -65,7 +65,7 @@
                     <div class="media-left media-middle"> <i class="fa fa-motorcycle"></i> </div>
                     <div class="media-body">
                         <h4 class="media-heading">Nature & Studio Photography</h4>
-                        <p>Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                        <p>Photo-shoots in unique locations across the country</p>
                     </div>
                 </div>
             </div>
@@ -96,9 +96,9 @@
                 <hr> </div>
             <div class="space"></div>
             <div class="row">
-                <div class="col-md-4"> <img src="img/9.jpg" data-lightbox="image-1" class="img-responsive" data-lightbox="lightbox">Winter </div>
+                <div class="col-md-4"> <img src="img/9.jpg" data-lightbox="image-1" class="img-responsive">Winter </div>
                 <div class="col-md-4"> <img src="img/2.jpg" class="img-responsive">Fall </div>
-                <div class="col-md-4"> <img src="img/3.jpg" class="img-responsive">Summer </div>
+                <div class="col-md-4"> <img src="img/3.jpg" class="img-responsive">Summer   </div>
             </div>
             <div class="row toppadding">
                 <div class="col-md-4"> <img src="img/8.jpg" class="img-responsive">Spring </div>
@@ -109,10 +109,16 @@
     </div>
     <div id="tf-about">
         <div class="overlay">
+            
             <div class="container">
+                
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-6">
+                <img src="img/15.jpg" class="about-img" >
+
+                    <div class="about">
+
                         <h3>About Me</h3>
+                        
                         <br>
                         <p>Cras sit amet nibh libero, in gravida nulla. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
                         <p>Metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
@@ -197,6 +203,44 @@
     <!-- Javascripts
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
+    <script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 </body>
 
 </html>
