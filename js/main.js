@@ -40,16 +40,10 @@ function main() {
     }());
 }
 main();
-$(document).ready(function () {
-    $('#img-winter').click(function () {
-        console.log("click works")
-    });
-    var gallery = $('#img-winter').simpleLightbox();
-   
-    var img1 = $('#img-winter');
+
+
+
+$(document).ready(function (){
     
-    $('#img-winter').click('open.simplelightbox', function () {
-        console.log("lightbox test")
-       gallery.open(img1);
-    });
+    
 }); //end ready
