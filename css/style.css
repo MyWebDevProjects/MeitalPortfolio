@@ -69,9 +69,7 @@ a:focus{
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(17%,rgba(0,0,0,0.73)), color-stop(35%,rgba(0,0,0,0.66)), color-stop(62%,rgba(0,0,0,0.55)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
+
 	height: auto;
 	background-attachment: fixed;
 }
@@ -221,7 +219,7 @@ ul.cat.list-inline li a:hover{
 .nopadding{ padding:  0;}
 
 #tf-about{
-	background: url(../img/07.jpg);
+/*	background: url(../img/07.jpg);*/
 	background-size: cover;
 	background-position: center;
 	background-attachment: scroll;
@@ -253,7 +251,11 @@ ul.why-me li{
 	margin: 10px 0;
 }
 #tf-contact{
-	background: url(../img/08.jpg);
+	background:url(../img/new/purple3.jpg) ;
+    /*making the background image with opacity*/
+    background-color: hsla(0,0%,100%,0.60);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-attachment: scroll;
@@ -266,6 +268,7 @@ form#contact {
 	padding: 5%;
 	background: #f1f1f1;
 	outline: 6px solid rgba(34, 34, 34, 0.08);
+    opacity: 0.9;
 }
 
 #tf-contact input.form-control {
@@ -429,12 +432,18 @@ img.hover-shadow {
 }
 
 .about-img{
-    width:540px; /* you can use % */
+    width:580px; /* you can use % */
     height: auto;
     float: left;
-    padding: 50px;
+    padding: 0px 50px 50px 0px ;
+    transition: all .2s ease-in-out;
 }
+.about-img:hover { transform: scale(1.1); }
 
 .about{
     padding: 10px;
 }
+/*
+.about-img{
+    opacity: 0.3;
+}*/
